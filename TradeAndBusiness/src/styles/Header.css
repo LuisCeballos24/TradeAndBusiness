@@ -1,11 +1,5 @@
 /* Ensure no margin on body and html */
 body,
-html {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-}
 
 /* Responsive Header */
 
@@ -13,18 +7,21 @@ html {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  width: 100%;
+  width: 100%;  /* Already set to 100% for horizontal */
+  height: 100vh;
   margin: 0;
   box-sizing: border-box;
   background-color: #fff;
 }
 
-.top-nav,
-.navbar {
+/* Responsive Top Navigation */
+
+.top-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+  /* Adjust padding as needed */
 }
 
 /* Responsive Logo */
@@ -50,7 +47,6 @@ html {
 
 .search-bar input {
   width: 100%; /* Remains full width */
-  background-color: #fff;
   border: none;
   outline: none;
   padding: 8px;
@@ -90,12 +86,20 @@ html {
 
 @media (max-width: 768px) {
   /* Adjust elements for smaller screens here */
-  .top-nav,
-  .navbar {
-    flex-wrap: wrap; /* Wrap elements on smaller screens */
+  .top-nav {
+    flex-direction: column; /* Stack navigation elements vertically */
+  }
+
+  .logo a {
+    margin-bottom: 10px; /* Add space between logo and search bar */
   }
 
   .search-bar {
+    width: 100%; /* Make search bar full width */
     margin: 10px auto; /* Center search bar on smaller screens */
+  }
+
+  .navbar {
+    margin-top: 10px; /* Add space between search bar and navigation */
   }
 }
