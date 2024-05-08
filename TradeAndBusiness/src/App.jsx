@@ -1,18 +1,18 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import Carousel from './components/Carousel';
-import ProductSection from './components/ProductSection';
-import Footer from './components/Footer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';// Asume que tienes una página de inicio definida
+// Otros imports necesarios...
 
 function App() {
-  return (
-    <div className="app">
-      <Navbar />
-      <Carousel />
-      <ProductSection />
-      <Footer />
-    </div>
-  );
+    return (
+        <Router>
+            <div>
+                <Header />
+                <Routes>
+                </Routes>
+            </div>
+        </Router>
+    );
 }
 
 export default App;

@@ -1,0 +1,101 @@
+/* Ensure no margin on body and html */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive Header */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.top-nav,
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* Responsive Logo */
+
+.logo a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  font-size: calc(1em + 0.5vw); /* Adjust font size based on viewport width */
+}
+
+/* Responsive Search Bar */
+
+.search-bar {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin: 0 15px;
+}
+
+.search-bar input {
+  width: 100%; /* Remains full width */
+  background-color: #fff;
+  border: none;
+  outline: none;
+  padding: 8px;
+}
+
+/* Responsive Navigation Links */
+
+.navbar a {
+  text-decoration: none;
+  color: #007bff;
+  padding: 8px 16px;
+  margin: 0 5px;
+  font-size: calc(0.8em + 0.2vw); /* Adjust font size based on viewport width */
+}
+
+/* Responsive User Actions */
+
+.user-actions {
+  display: flex;
+  align-items: center;
+}
+
+.user-actions button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.user-actions button:hover {
+  background-color: #0056b3;
+}
+
+/* Media Queries for Smaller Screens */
+
+@media (max-width: 768px) {
+  /* Adjust elements for smaller screens here */
+  .top-nav,
+  .navbar {
+    flex-wrap: wrap; /* Wrap elements on smaller screens */
+  }
+
+  .search-bar {
+    margin: 10px auto; /* Center search bar on smaller screens */
+  }
+}

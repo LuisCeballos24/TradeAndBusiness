@@ -1,9 +1,16 @@
 import React from 'react';
 
-const Footer = () => (
-  <footer className="bg-dark text-light text-center p-3">
-    <p>MegaMart © 2024 All rights reserved.</p>
-  </footer>
-);
+const Footer = () => {
+  return (
+    <footer className="App-footer">
+      <p>&copy; 2024 MegaMart</p>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+    </footer>
+  );
+};
 
 export default Footer;
