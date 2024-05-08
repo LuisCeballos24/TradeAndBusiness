@@ -7,11 +7,11 @@ body,
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  width: 100%;  /* Already set to 100% for horizontal */
+  width: 100%; /* Already set to 100% for horizontal */
   height: 100vh;
   margin: 0;
   box-sizing: border-box;
-  background-color: #fff;
+  background-color: #F8F9FA; /* Light gray background */
 }
 
 /* Responsive Top Navigation */
@@ -28,7 +28,7 @@ body,
 
 .logo a {
   text-decoration: none;
-  color: #007bff;
+  color: #333; /* Dark gray text color */
   font-weight: bold;
   font-size: calc(1em + 0.5vw); /* Adjust font size based on viewport width */
 }
@@ -47,39 +47,69 @@ body,
 
 .search-bar input {
   width: 100%; /* Remains full width */
+  background-color: #fff;
+  color: black;
   border: none;
-  outline: none;
+  outline:none;
   padding: 8px;
+}
+
+.search-bar button {
+  background-color: #fff; /* Set background color to white */
+  border: none;
+  cursor: pointer;
+  color: #333; /* Dark gray text color */
 }
 
 /* Responsive Navigation Links */
 
 .navbar a {
-  text-decoration: none;
-  color: #007bff;
-  padding: 8px 16px;
-  margin: 0 5px;
-  font-size: calc(0.8em + 0.2vw); /* Adjust font size based on viewport width */
-}
+    text-decoration: none;
+    color: #333; /* Dark gray text color */
+    padding: 8px 16px;
+    margin: 0 5px;
+    font-size: calc(0.8em + 0.2vw); /* Adjust font size based on viewport width */
+    position: relative; /* For dropdown arrow */
+  }
+  
+  .navbar a::after {
+    content: "";
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-top: 5px solid transparent;
+    border-right: 5px solid #333; /* Match text color */
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid transparent;
+    margin-left: 5px; /* Adjust spacing as needed */
+    transform: rotate(90deg); /* Rotate arrow */
+    transition: transform 0.3s ease; /* Smooth transition */
+  }
+  
+  .navbar a:hover::after {
+    transform: rotate(0deg); /* Show arrow on hover */
+  }
 
 /* Responsive User Actions */
 
 .user-actions {
   display: flex;
+  color: #333; /* Dark gray text color */
   align-items: center;
 }
 
 .user-actions button {
-  background-color: #007bff;
-  color: white;
-  border: none;
+  background-color: #fff; /* White button background */
+  color: #333; /* Dark gray text color */
+  border: 1px solid #ddd; /* Light gray border */
   padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
+  margin: 0 5px; /* Add spacing between buttons */
 }
 
 .user-actions button:hover {
-  background-color: #0056b3;
+  background-color: #F8F9FA; /* Light gray background on hover */
 }
 
 /* Media Queries for Smaller Screens */
@@ -91,15 +121,7 @@ body,
   }
 
   .logo a {
-    margin-bottom: 10px; /* Add space between logo and search bar */
-  }
-
-  .search-bar {
-    width: 100%; /* Make search bar full width */
-    margin: 10px auto; /* Center search bar on smaller screens */
-  }
-
-  .navbar {
-    margin-top: 10px; /* Add space between search bar and navigation */
+    margin-bottom: 10px;
   }
 }
+  
